@@ -1,0 +1,10 @@
+on: [push]
+name: CXX UTILS CI
+jobs:
+  build_and_test:
+    name: CXX UTILS CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "Run tests."
+        run: make build && make run
